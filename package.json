@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "currency-converter-lt": "^2.0.0",
     "qrcode": "^1.5.3"
   }
 }
