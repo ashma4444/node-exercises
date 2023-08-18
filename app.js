@@ -1,6 +1,7 @@
 const http = require("http");
 const QRCode = require("qrcode");
 const myModule = require("./myModule");
+const currConv = require("./currencyConverter");
 
 // render a qrcode for the terminal -> toString
 // Generate QR Code for  the url on the terminal using package qrcode
@@ -18,6 +19,12 @@ http
     // to display qrcode in image format in browser -> toDataURL
     const urlData = await QRCode.toDataURL("www.facebook.com");
     res.write(`<img src="${urlData}"> </img>`);
+
+    // currency convertor
+    const currencyConverting = currConv(1000);
+    const currRes = await currencyConverting.convert();
+    res.write(`${currencyConverting.currencyAmount} USD = ${currRes} NPR`);
+
     res.end();
   })
   .listen(3001);
