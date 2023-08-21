@@ -22,6 +22,25 @@ async function main() {
     to: "ashma20570218@gmail.com", // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world! Mail sent successfully.", // plain text body
+
+    // send attachments
+    attachments: [
+      {
+        // use URL as an attachment
+        filename: "img.jpg",
+        path: "img.jpg",
+      },
+      {
+        // utf-8 string as an attachment
+        filename: "text1.txt",
+        content: "hello world!",
+      },
+      {
+        // binary buffer as an attachment
+        filename: "text2.txt",
+        content: new Buffer("hello world!", "utf-8"),
+      },
+    ],
   });
 
   console.log("Message sent: %s", info.messageId);
