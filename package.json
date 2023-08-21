@@ -3,6 +3,7 @@
     "axios": "^1.4.0",
     "currency-converter-lt": "^2.0.0",
     "dotenv": "^16.3.1",
+    "handlebars": "^4.7.8",
     "moment": "^2.29.4",
     "nodemailer": "^6.9.4",
     "pdfkit": "^0.13.0",
