@@ -23,7 +23,7 @@ transporter.verify((error, success) => {
   }
 });
 
-const main = async (oayload) => {
+const main = async (payload) => {
   const { emailMsg, to } = payload;
   const htmlFile = await fs.readFileSync("./template.html"); // Buffer
   const htmlData = Buffer.from(htmlFile).toString(); // converting buffer to string
